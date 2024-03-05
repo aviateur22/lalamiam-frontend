@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-secondary-rectangle-button',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./secondary-rectangle-button.component.css']
 })
 export class SecondaryRectangleButtonComponent {
+  @Output() clickEmitter: EventEmitter<void> = new EventEmitter<void>();
 
+  click(): void {
+    this.clickEmitter.emit();
+  }
 }

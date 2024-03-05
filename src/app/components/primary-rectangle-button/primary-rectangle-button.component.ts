@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-secondary-round-button',
-  templateUrl: './secondary-round-button.component.html',
-  styleUrls: ['./secondary-round-button.component.css']
+  selector: 'app-primary-rectangle-button',
+  templateUrl: './primary-rectangle-button.component.html',
+  styleUrls: ['./primary-rectangle-button.component.css']
 })
-export class SecondaryRoundButtonComponent {
-
+export class PrimaryRectangleButtonComponent {
   @Output() clickEmitter: EventEmitter<void> = new EventEmitter<void>();
 
   click(): void {
