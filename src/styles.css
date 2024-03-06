@@ -1,4 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'raleway';
+  src: url('./assets/fonts/Raleway.ttf');
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'raleway', 'arial', sans-serif;
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'raleway', 'arial', sans-serif; }
+
+:root{
+  /* break point */
+  --tablet: 768px;
+  --desktop: 1024px;
+
+  --first_color: #FFAE00;
+  --second_color: #000;
+  --third_color: #292929;
+  --fourth_color: #3C4043;
+
+  /* Hauteur navbar*/
+  --nav_height: 105px;
+
+  /* font */
+  --font_medium: 800;
+  --font_heavy: 900;
+
+  /* mobile */
+  --big_size_mobile: 1.5em;
+  --meduim_size_mobile: 1.25em;
+  --normal_size_mobile:1em;
+  --small_size_mobile: 0.75em;
+
+  /* tablet */
+  --text_tablet: 1.25em;
+  --title_tablet: 2em;
+
+  /* computer */
+  --text_desktop: 1.375em;
+  --title_desktop: 2.25em
+}
+
+.button {
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  cursor: pointer ;
+}
+
+.button__container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round--button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.rectangle--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: var(--meduim_size_mobile) !important;
+  font-weight: var(--font_medium);
+  text-transform: capitalize;
+}
+
+.secondary--button {
+  border: 1px solid var(--first_color);
+  background-color: transparent;
+  color: var(--first_color);
+}
+
+.secondary--button svg {
+  fill: var(--first_color);
+}
+.primary--button {
+  background-color: var(--first_color);
+  color: var(--third_color);
+}
