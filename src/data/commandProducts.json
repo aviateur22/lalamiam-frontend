@@ -1,0 +1,40 @@
+{
+  "storeId" : 1,
+  "commandId" : 1,
+  "manualCommandInformation": {
+    "clientPhone" : "0623410235",
+    "selectProducts" : [
+      {
+        "productId" : 1,
+        "name" : "",
+        "price": "",
+        "photo" : "",
+        "isAvail" : "",
+        "selectQuantity" : 2
+      },
+      {
+        "productId" : "02",
+        "name" : "",
+        "price": "",
+        "photo" : "",
+        "isAvail" : "",
+        "selectQuantity" : 2
+      },
+      {
+        "productId" : "03",
+        "name" : "",
+        "price": "",
+        "photo" : "",
+        "isAvail" : "",
+        "selectQuantity" : 2
+      }
+    ],
+    "slotTime": "2024-03-04T21:37:24.97623"
+  },
+  "calculatedCommandInformation" : {
+    "commandCode": "rxjs",
+    "commandePrice": 5.0,
+    "productQuantity": 5,
+    "commandPreparationTime": 5
+  }
+}

@@ -87,7 +87,19 @@ body { margin: 0; font-family: 'raleway', 'arial', sans-serif; }
 .secondary--button svg {
   fill: var(--first_color);
 }
+
 .primary--button {
   background-color: var(--first_color);
   color: var(--third_color);
+}
+
+.secondary--active--button {
+  border: 1px solid var(--third_color);
+  background-color: transparent;
+  color: var(--third_color);
+}
+
+.primary--active--button {
+  background-color: var(--third_color);
+  color: var(--first_color);
 }

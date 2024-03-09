@@ -1,8 +1,18 @@
+<ul appProductClickList>
+  <app-product-information *ngFor="let product of products; let index = index; let isLast = last"
+  [index]= index
+  [isLast]=isLast
+  [isProductInCommand]="true" ></app-product-information>
+
+</ul>
+<!--
 <app-rectangle-button buttonText="bonjour" [isPrimary]=false></app-rectangle-button>
 <app-rectangle-button buttonText="bonjour" [isPrimary]=true></app-rectangle-button>
-<app-round-button [isPrimary]=true iconeName="search"></app-round-button>
-<app-round-button [isPrimary]=false iconeName="add"></app-round-button>
-<app-round-button [isPrimary]=false iconeName="minus"></app-round-button>
-<app-round-button [isPrimary]=false iconeName="trash"></app-round-button>
-<app-round-button [isPrimary]=true iconeName="check"></app-round-button>
+<app-round-button [isPrimary]=true [isActive]=false iconeName="search"></app-round-button>
+<app-round-button [isPrimary]=false [isActive]=true iconeName="add"></app-round-button>
+<app-round-button [isPrimary]=false [isActive]=false iconeName="minus"></app-round-button>
+<app-round-button [isPrimary]=false [isActive]=false iconeName="trash"></app-round-button>
+<app-round-button [isPrimary]=true [isActive]=false iconeName="trash"></app-round-button>
+<app-round-button [isPrimary]=true [isActive]=true iconeName="check"></app-round-button>
+-->
 <router-outlet></router-outlet>
