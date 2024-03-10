@@ -3,8 +3,48 @@
   [index]= index
   [isLast]=isLast
   [isProductInCommand]="true" ></app-product-information>
-
 </ul>
+
+<app-simple-input-text
+  inputType="text"
+  componentName="name"
+  labelText="n° de téléphone du client">
+</app-simple-input-text>
+
+<app-double-input-text
+  inputTypeOne="text"
+  componentNameOne="name"
+  labelTextOne="Ville"
+  inputTypeTwo="text"
+  componentNameTwo="name"
+  labelTextTwo="CP">
+</app-double-input-text>
+
+<app-select-text
+  labelText="type de commerce"
+  selectInputText="Selectionner">
+</app-select-text>
+
+<app-text-area
+  labelText="description"
+  componentNameOne="name">
+</app-text-area>
+
+<app-filter-list
+  inputType="text"
+  componentName="name"
+  labelText="rechercher un produit">
+</app-filter-list>
+
+<app-select-slot-time
+  labelText="heure : "
+  slotTime="20h10"
+  componentName="checkbox"
+  inputType="checkbox"></app-select-slot-time>
+
+<app-button-container></app-button-container>
+<app-select-command-date></app-select-command-date>
+<app-select-image></app-select-image>
 <!--
 <app-rectangle-button buttonText="bonjour" [isPrimary]=false></app-rectangle-button>
 <app-rectangle-button buttonText="bonjour" [isPrimary]=true></app-rectangle-button>
