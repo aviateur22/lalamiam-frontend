@@ -1,0 +1,13 @@
+<div class="input__component__background">
+  <div class="input__component__title" >
+    <label class="input--title--text" [for]=componentName>
+      {{labelText}}
+    </label>
+  </div>
+  <div class="input__text__container">
+    <select class="input--text" [name]=componentName [id]=componentName>
+      <option disabled  selected>{{selectInputText}}</option>
+      <option *ngFor="let opt of listOptions" [value]="opt">{{opt}}</option>
+</select>
+  </div>
+</div>
