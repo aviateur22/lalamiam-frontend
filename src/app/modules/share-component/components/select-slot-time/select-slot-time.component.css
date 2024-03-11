@@ -1,0 +1,20 @@
+.checkbox--container {
+  flex-direction: row;
+  justify-content: space-between;
+  height: 65px;
+}
+
+.checkbox {
+  justify-content: flex-end !important;
+  width: 35px;
+}
+
+.is--active {
+  background-color: var(--first_color);
+  color: var(--third_color);
+}
+
+.slot--time {
+  font-size: var(--meduim_size_mobile);
+  font-weight: var(--font_medium);
+}

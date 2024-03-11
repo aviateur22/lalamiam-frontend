@@ -1,0 +1,19 @@
+.select--image {
+  justify-content: space-between;
+  align-items: center;
+}
+.product__main__img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+}
+
+.product--image{
+  object-fit:contain !important;
+  object-position: center center;
+  height: auto;
+  width: 100%;
+}

@@ -1,0 +1,11 @@
+<div (click)="click()" [ngClass]="{'is--active': isActive}" class="input__component__background checkbox--container">
+  <div (click)="click()" class="input__component__title" >
+    <label class="input--title--text" [for]=componentName>
+      {{ labelText }} <span class="slot--time">{{ slotTime }}</span>
+    </label>
+  </div>
+  <div class="input__text__container checkbox">
+    <input class="input--text"  [type]=inputType [name]=componentName [id]=componentName [checked]="isChecked">
+  </div>
+</div>
+

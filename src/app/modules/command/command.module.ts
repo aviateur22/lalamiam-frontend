@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { ShareComponentModule  } from './../share-component/share-component.module';
 import frontEndUrl from 'src/app/utils/frontEndUrl';
 import pageTtile from 'src/app/utils/pageTtile';
 import { environment } from 'src/environments/environment';
@@ -26,6 +27,7 @@ const manageCommand: Routes = [
   ],
   imports: [
     CommonModule,
+    ShareComponentModule,
     RouterModule.forChild(manageCommand)
   ],
   providers: [CommandService]

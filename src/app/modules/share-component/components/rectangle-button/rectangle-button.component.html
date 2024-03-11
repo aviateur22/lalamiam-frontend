@@ -1,0 +1,7 @@
+<div (click)="click()" class="button__container">
+  <div
+    [ngClass]="[isPrimary ? 'primary--button' : 'secondary--button']"
+    class="button rectangle--button">
+    {{ buttonText }}
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<div  [attr.data-position]=index class="product__main__container">
+  <ng-container *ngIf="isProductAvail; else elseBlock">
+    <!--Produit disponible-->
+    <div class="product__detail__container" [ngClass]="{'product--detail--active': isProductActive}" appProductInformation>
+      <div [ngClass]="{'text--active': isProductActive}" class="product__detail__header">
+        <div class="product__presentation">
+          <p class="product__presentation__number"> produit N°{{index + 1 }} : </p>
+          <p class="product__presentation__title"> pizza marguritta </p>
+        </div>
+        <div class="product__delete__container">
+          <app-round-button (clickEmitter)="deleteProduct()" iconeName="trash" [isPrimary]=false [isActive]=isProductActive></app-round-button>
+        </div>
+      </div>
+      <div class="product__main">
+        <!-- detail produit commande-->
+        <div class="product__main__management">
+
+           <!-- Produit vu par un client-->
+          <ng-container *ngIf="isProductInCommand">
+            <!-- Image produit-->
+            <div class="product__main__img">
+              <img class="product--image" src="../../../assets/images/hamburger.jpg" alt="">
+            </div>
+
+            <!-- Produit en modification-->
+            <ng-container *ngIf="isModificationActive; else elseBlock">
+              <div class="product__main__button__container">
+                <app-round-button (clickEmitter)="decreaseQuantity()" iconeName="minus" [isPrimary]=false [isActive]=isProductActive></app-round-button>
+                <div [ngClass]="{'text--active': isProductActive}" class="product__main__button__container__text">
+                  <p>quantité </p>
+                  <p class="product--quantity">: 2</p>
+                </div>
+                <app-round-button (clickEmitter)="increaseQuantity()" iconeName="add" [isPrimary]=true [isActive]=isProductActive></app-round-button>
+              </div>
+            </ng-container>
+
+              <!-- Produit en lecture -->
+              <ng-template #elseBlock>
+                <div class="product__main__button__container">
+                  <div [ngClass]="{'text--active': isProductActive}" class="product__main__button__container__text">
+                    <p>quantité </p>
+                    <p class="product--quantity">: 2</p>
+                  </div>
+                </div>
+              </ng-template>
+          </ng-container>
+
+          <!-- Produit vu par un professionnel-->
+          <ng-template #elseBlock>
+            <div class="product__main__img">
+              <img src="../../../assets/images/hamburger.jpg" alt="">
+            </div>
+            <div class="product__in__store">
+              <p>Produit indisponible: /p>
+              <input type="checkbox" name="" id="">
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <!--Produit pas disponible-->
+  <ng-template #elseBlock>
+    <div class="product__detail__container not--avail" [ngClass]="{'product--detail--active': isProductActive}">
+      <div [ngClass]="{'text--active': isProductActive}" class="product__detail__header">
+        <div class="product__presentation">
+          <p class="product__presentation__number"> produit N°{{index + 1 }} : </p>
+          <p class="product__presentation__title"> pizza marguritta </p>
+        </div>
+      </div>
+      <div class="product__main">
+        <!-- detail produit commande-->
+        <div class="product__main__management">
+          <!-- Image produit-->
+          <div class="product__main__img">
+            <img class="product--image" src="../../../assets/images/hamburger.jpg" alt="">
+          </div>
+        </div>
+        <div class="product__text__container">
+          <p>produit indisponible</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <!--Si Fin de liste des produits-->
+  <ng-container *ngIf="isLast" >
+    <div class="product__detail__end">
+      <p>Fin</p>
+    </div>
+  </ng-container>
+</div>
