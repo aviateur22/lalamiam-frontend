@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ShareComponentModule  } from './../share-component/share-component.module';
-import frontEndUrl from 'src/app/utils/frontEndUrl';
-import pageTtile from 'src/app/utils/pageTtile';
 import { environment } from 'src/environments/environment';
 import { SelectProductInCommandComponent } from './components/select-product-in-command/select-product-in-command.component';
 import { SlotAvailibilityComponent } from './components/slot-availibility/slot-availibility.component';
 import { ConfirmationCommandComponent } from './components/confirmation-command/confirmation-command.component';
 import { ProductInCommandComponent } from './components/product-in-command/product-in-command.component';
 import { CommandService } from './services/command.service';
+import frontEndUrl from 'src/app/utils/frontEndUrl';
+import pageTtile from 'src/app/utils/pageTtile';
 
 const manageCommand: Routes = [
+  // Afficha ed'une commande
+  { path: frontEndUrl.getCommandUrl.url, component: ProductInCommandComponent, title: pageTtile.displayCommandPageTitle[environment.language]},
   // Afficher les produits de la commande + produits commerce
   { path: frontEndUrl.selectProductsInCommandUrl.url, component: SelectProductInCommandComponent, title: pageTtile.selectProductInCommandPageTitle[environment.language]},
   // Afficher les horaires de disponible

@@ -2,9 +2,15 @@ export default {
   home: {
     url: 'home'
   },
-  selectProductsInCommandUrl: {
-    url: ''
+  // Affichage d'une commande
+  getCommandUrl: {
+    url: 'display-command'
   },
+  // Sélection produits dans commande
+  selectProductsInCommandUrl: {
+    url: 'select/product-in-command'
+  },
+  // Affichage des creneaux disponible pour une commande
   getAllSlotsAvailibilityUrl: {
     url: ''
   },

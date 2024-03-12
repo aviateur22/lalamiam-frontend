@@ -1,12 +1,14 @@
 <div class="input__component__background">
-  <div class="button__container">
+  <div *ngIf="isSecondaryButtonVisible"
+   class="button__container">
     <app-rectangle-button
-      buttonText="annuler"
+      [buttonText]=textSecondaryButton
       [isPrimary]=false></app-rectangle-button>
   </div>
-  <div class="button__container">
+  <div *ngIf="isPrimaryButtonVisible"
+    class="button__container">
     <app-rectangle-button
-      buttonText="enregistrer la commade"
+      [buttonText]=textPrimaryButton
       [isPrimary]=true></app-rectangle-button>
   </div>
 </div>

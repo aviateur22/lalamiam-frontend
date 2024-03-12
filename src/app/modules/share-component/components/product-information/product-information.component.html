@@ -7,7 +7,7 @@
           <p class="product__presentation__number"> produit N°{{index + 1 }} : </p>
           <p class="product__presentation__title"> pizza marguritta </p>
         </div>
-        <div class="product__delete__container">
+        <div *ngIf="isModificationActive" class="product__delete__container">
           <app-round-button (clickEmitter)="deleteProduct()" iconeName="trash" [isPrimary]=false [isActive]=isProductActive></app-round-button>
         </div>
       </div>

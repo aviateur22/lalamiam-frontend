@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   max-width: var(--desktop);
-  margin: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .product__detail__container {
@@ -105,12 +106,14 @@
 
 .product__detail__end {
   display: flex;
+  border-top: 1px solid white;
   justify-content: center;
   align-items: center;
   padding: 5px;
   font-size: var(--small_size_mobile);
   font-weight: var(--font_medium);
   width: 100%;
-  background-color: transparent;
+  background-color: var(--third_color);
   text-transform: uppercase;
+  color: var(--first_color);
 }

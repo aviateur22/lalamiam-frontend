@@ -1,14 +1,18 @@
 export default {
+  displayCommandPageTitle: {
+    fr: 'LALAMIAM | Affichage commande',
+    en: 'LALAMIAM | Display Command'
+  },
   selectProductInCommandPageTitle: {
-    fr: 'LALAMIAM | selection produits',
-    en: 'LALAMIAM | products selection'
+    fr: 'LALAMIAM | Selection produits',
+    en: 'LALAMIAM | Products selection'
   },
   getAllSlotsAvailibilityPageTitle: {
-    fr: 'LALAMIAM | selection creneau de réservation',
-    en: 'LALAMIAM | command slot selectionselect products'
+    fr: 'LALAMIAM | Selection creneau de réservation',
+    en: 'LALAMIAM | Command slot selectionselect products'
   },
   confirmationCommandPageTitle: {
-    fr: 'LALAMIAM | selection creneau de réservation',
-    en: 'LALAMIAM | command slot selectionselect products'
+    fr: 'LALAMIAM | Selection creneau de réservation',
+    en: 'LALAMIAM | Command slot selectionselect products'
   }
 }
