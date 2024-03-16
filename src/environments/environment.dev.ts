@@ -5,6 +5,6 @@ export const environmentDev = {
   production: false,
   name: 'dev',
   domain: 'http://localhost:8080',
-  api: '/api/v1/lalamia',
+  api: '/api/v1',
   language: 'fr'
 };

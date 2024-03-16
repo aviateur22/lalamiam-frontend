@@ -9,8 +9,8 @@ import { SlotAvailibilityComponent } from './components/slot-availibility/slot-a
 import { ConfirmationCommandComponent } from './components/confirmation-command/confirmation-command.component';
 import { ProductInCommandComponent } from './components/product-in-command/product-in-command.component';
 import { CommandService } from './services/command.service';
-import frontEndUrl from 'src/app/utils/frontEndUrl';
-import pageTtile from 'src/app/utils/pageTtile';
+import frontEndUrl from 'src/app/utils/front-end-url';
+import pageTtile from 'src/app/utils/page-title';
 
 const manageCommand: Routes = [
   // Afficha ed'une commande

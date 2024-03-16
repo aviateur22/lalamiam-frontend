@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ProductInformationComponent } from 'src/app/modules/share-component/components/product-information/product-information.component';
+import { CommandService } from '../../services/command.service';
+import { Product } from '../../models/product.model';
+import { Command } from '../../models/command.model';
 
 @Component({
   selector: 'app-product-in-command',
@@ -7,9 +9,15 @@ import { ProductInformationComponent } from 'src/app/modules/share-component/com
   styleUrls: ['./product-in-command.component.css']
 })
 export class ProductInCommandComponent {
-  products: ProductInformationComponent[] = [
-    new ProductInformationComponent(),
-    new ProductInformationComponent(),
-    new ProductInformationComponent()
-  ]
+  command: Command | undefined;
+  products: Product[] = []
+
+  public constructor(private _commandService: CommandService) {}
+
+  ngOnInit() {
+   this._commandService.getOneCommand(BigInt(3), BigInt(3)).subscribe(command => {
+      this.command = command;
+      this.products = this.command.products;
+    });
+  }
 }
