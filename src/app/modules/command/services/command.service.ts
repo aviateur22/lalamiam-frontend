@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { Command } from '../models/command.model';
-import { CommandDto } from '../models/dtos/command.dto';
+import { CommandDto } from '../models/dto/command.dto';
 import { environment } from 'src/environments/environment';
 import backEndUrl from 'src/app/utils/back-end-url';
 import { StringUtil } from 'src/app/utils/string-utils';
-import { ProductDto } from '../models/dtos/product.dto';
+import { ProductDto } from '../models/dto/product.dto';
 import { Product } from '../models/product.model';
 
 @Injectable({

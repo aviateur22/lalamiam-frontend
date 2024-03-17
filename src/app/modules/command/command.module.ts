@@ -11,6 +11,8 @@ import { ProductInCommandComponent } from './components/product-in-command/produ
 import { CommandService } from './services/command.service';
 import frontEndUrl from 'src/app/utils/front-end-url';
 import pageTtile from 'src/app/utils/page-title';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './store/reducer';
 
 const manageCommand: Routes = [
   // Afficha ed'une commande
@@ -30,7 +32,8 @@ const manageCommand: Routes = [
   imports: [
     CommonModule,
     ShareComponentModule,
-    RouterModule.forChild(manageCommand)
+    RouterModule.forChild(manageCommand),
+    StoreModule.forFeature('command', reducers)
   ],
   providers: [CommandService]
 })
