@@ -7,6 +7,9 @@ import { catchError, map, mergeMap, of } from "rxjs";
 @Injectable()
 export class CommandEffect {
 
+  /**
+   * Observable getCommand
+   */
   getCommand$ = createEffect(()=>
     this._action$.pipe(
       ofType(CommandAction.getCommand),
