@@ -16,9 +16,9 @@ export class CommandEffect {
       mergeMap((data)=>
         this._commandService.getOneCommand(data.storeId, data.commandId).pipe(
           map((command)=> CommandAction.getCommandSuccess({command})),
-          catchError((error)=>
-            of(CommandAction.getCommandError({error: error.message}))
-          )
+          catchError((error)=>{
+            return of(CommandAction.getCommandError({error: error.message}))
+          })
         )
       )
     )

@@ -16,5 +16,11 @@ export default {
   },
   confirmCommandUrl: {
     url: ''
+  },
+  notFindUrl: {
+    url: 'not-found'
+  },
+  forbiddenUrl: {
+    url: 'forbidden'
   }
 }

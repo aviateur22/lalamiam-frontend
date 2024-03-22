@@ -24,7 +24,7 @@ export class ProductInCommandComponent {
   }
 
   ngOnInit() {
-    const storeId: bigint = BigInt(3);
+    const storeId: bigint = BigInt(1);
     const commandId: bigint = BigInt(3);
 
     this._store.dispatch(CommandActions.getCommandInit());
