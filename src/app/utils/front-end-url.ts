@@ -4,11 +4,11 @@ export default {
   },
   // Affichage d'une commande
   getCommandUrl: {
-    url: 'display-command'
+    url: 'display-command/store/:storeId/command/:commandId'
   },
   // Sélection produits dans commande
   selectProductsInCommandUrl: {
-    url: 'select/product-in-command'
+    url: 'select/product-in-command/store/:storeId/command/:commandId'
   },
   // Affichage des creneaux disponible pour une commande
   getAllSlotsAvailibilityUrl: {

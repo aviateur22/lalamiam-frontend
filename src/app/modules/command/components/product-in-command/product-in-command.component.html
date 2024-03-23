@@ -1,30 +1,36 @@
 <div class="outside__window__container">
   <div class="inside__window__container">
     <app-header></app-header>
-    <div *ngIf="command$ | async as command">
-      <form>
-        <app-simple-input-text
-          labelText="n° téléphone du client"
-          inputType="text"
-          componentName="clientPhone">
-        </app-simple-input-text>
-        <app-filter-list labelText="rechercher un produit"></app-filter-list>
-        <ul appProductClickList>
-          <app-product-information *ngFor="let product of command.products; let index = index; let isLast = last"
-            [index] = index
-            [isLast]= isLast
-            [isProductAvail]="true"
-            [isProductInCommand]="true"
-            [isModificationActive]="false"
-            ></app-product-information>
-        </ul>
-        <app-button-container
-          [isPrimaryButtonVisible]="true"
-          [isSecondaryButtonVisible]="false"
-          textPrimaryButton="modifier la commande">
-
-        </app-button-container>
-      </form>
+    <div *ngIf="isLoading$ | async; else elseBlock">
+     <p>chargement en cours</p>
     </div>
+    <ng-template #elseBlock>
+      <div *ngIf="command$ | async as command">
+        <form>
+          <app-simple-input-text
+            labelText="n° téléphone du client"
+            inputType="text"
+            componentName="clientPhone">
+          </app-simple-input-text>
+          <app-filter-list labelText="rechercher un produit"></app-filter-list>
+          <ul appProductClickList>
+            <app-product-information *ngFor="let product of command.products; let index = index; let isLast = last"
+              [index] = index
+              [isLast]= isLast
+              [isProductAvail]="true"
+              [isProductInCommand]="true"
+              [isModificationActive]="false"
+              ></app-product-information>
+          </ul>
+          <app-button-container
+            [isPrimaryButtonVisible]="true"
+            [isSecondaryButtonVisible]="false"
+            textPrimaryButton="modifier la commande">
+
+          </app-button-container>
+        </form>
+      </div>
+    </ng-template>
+
   </div>
 </div>

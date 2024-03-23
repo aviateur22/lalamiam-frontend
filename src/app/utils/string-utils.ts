@@ -12,4 +12,8 @@ export class StringUtil {
     }
     return text
   }
+
+  static stringIsNullOrWhitSpace(text: string): boolean {
+    return (text !== null);
+  }
 }

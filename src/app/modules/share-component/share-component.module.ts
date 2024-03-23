@@ -16,6 +16,7 @@ import { SelectCommandDateComponent } from './components/select-command-date/sel
 import { ButtonContainerComponent } from './components/button-container/button-container.component';
 
 import { CalendarModule } from 'primeng/calendar';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CalendarModule } from 'primeng/calendar';
     SelectTextComponent,
     SelectSlotTimeComponent,
     SelectCommandDateComponent,
-    ButtonContainerComponent
+    ButtonContainerComponent,
+    LoaderComponent
 
 
 

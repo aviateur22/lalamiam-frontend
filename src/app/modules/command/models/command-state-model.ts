@@ -1,4 +1,4 @@
-import { Command } from "../command.model";
+import { Command } from "./command.model";
 
 export interface CommandState {
   isLoading: boolean,

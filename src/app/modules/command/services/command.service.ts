@@ -18,7 +18,8 @@ export class CommandService {
 
   constructor(private _http: HttpClient) { }
 
-  public getOneCommand(commandId: bigint, storeId: bigint): Observable<Command> {
+  public getOneCommand(commandId: string, storeId: string): Observable<Command> {
+
     let replacements: { [key: string]: string } = {
       ":storeId": storeId.toString(),
       ":commandId": commandId.toString()

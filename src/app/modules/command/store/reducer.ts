@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { CommandState } from "../models/store/command-state";
+import { CommandState } from "../models/command-state-model";
 import * as CommandAction from "./action"
 
 export const initialState: CommandState = {
