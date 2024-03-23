@@ -1,13 +1,14 @@
+import { isDevMode } from "@angular/core";
 import { environmentDev } from "./environment.dev";
+import { environmentProd } from "./environment.prod";
 
-/**
- * Dev - LocalServer
- */
+const activeEnvironment = isDevMode() ? environmentDev : environmentProd;
+
 export const environment = {
-  production: environmentDev.production,
-  name: environmentDev.name,
-  domain: environmentDev.domain,
-  api: environmentDev.api,
-  baseUrl: environmentDev.domain + environmentDev.api,
-  language: environmentDev.language
+  production: activeEnvironment.production,
+  name: activeEnvironment.name,
+  domain: activeEnvironment.domain,
+  api: activeEnvironment.api,
+  baseUrl: activeEnvironment.domain + environmentDev.api,
+  language: activeEnvironment.language
 };
